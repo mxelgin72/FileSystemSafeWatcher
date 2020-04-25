@@ -438,6 +438,9 @@ namespace menelabs.core
                                 }
 
                                 bool raiseEvent = true;
+                                // for directories .ext 
+                                if (File.Exists(current.Args.FullPath))
+                                
                                 if (current.Args.ChangeType == WatcherChangeTypes.Created || current.Args.ChangeType == WatcherChangeTypes.Changed)
                                 {
                                     //check if the file has been completely copied (can be opened for read)
